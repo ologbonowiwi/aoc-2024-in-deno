@@ -46,16 +46,11 @@ export async function solve(): Promise<number> {
 
   const minHeap1 = new BinaryHeap<number>(ascend)
   const minHeap2 = new BinaryHeap<number>(ascend)
-  const arr1 = [];
-  const arr2 = [];
 
   for (const line of lines) {
     const [a, b] = line.split('   ').map(x => parseInt(x, 10));
 
     if (!a && !b) break;
-
-    arr1.push(a);
-    arr2.push(b);
 
     minHeap1.push(a);
     minHeap2.push(b);
